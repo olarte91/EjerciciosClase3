@@ -10,6 +10,17 @@ public class Ejercicio2 {
 
          int [] numeros = {0,0,0};
 
+         for(int i = 0 ; i < numeros.length; i++)
+         {
+            System.out.printf("Ingrese el número %d:\n", i +1);
+            numeros[i] = scanner.nextInt();
+         }
+
+         for(int i = 0; i < numeros.length; i++)
+         {
+            //System.out.println(numeros[i]);
+         }
+
          scanner.close();
 
 
