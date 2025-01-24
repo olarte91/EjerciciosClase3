@@ -9,6 +9,7 @@ public class Ejercicio2 {
         var scanner = new Scanner(System.in);
 
          int [] numeros = {0,0,0};
+         var numeroGrande = 0;
 
          for(int i = 0 ; i < numeros.length; i++)
          {
@@ -16,10 +17,19 @@ public class Ejercicio2 {
             numeros[i] = scanner.nextInt();
          }
 
-         for(int i = 0; i < numeros.length; i++)
+
+         for(int i = 0; i < numeros.length - 1; i++)
          {
-            //System.out.println(numeros[i]);
+            if (numeros[i] > numeros[i + 1] && numeros[i] > numeroGrande)
+            {
+               numeroGrande = numeros[i];
+            }else if (numeros[i + 1] > numeros [i] && numeros[i + 1] > numeroGrande)
+            {
+               numeroGrande = numeros[i + 1];
+            }
          }
+
+         System.out.printf("El número más grande es: %d", numeroGrande);
 
          scanner.close();
 
